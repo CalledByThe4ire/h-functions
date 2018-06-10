@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import isPalindrome from './isPalindrome';
 
-export default half;
+export default isPalindrome;
