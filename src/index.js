@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import substr from './substr';
 
-export default half;
+export default substr;
