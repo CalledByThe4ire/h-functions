@@ -1,2 +1,2 @@
-export const identity = str => str;
-export const getLength = str => str.length;
+// @flow
+export default (str: string): number => str.length;
