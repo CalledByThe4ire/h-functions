@@ -1,17 +1,20 @@
-# nodejs-package
+### apply.js
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+Реализуйте и экспортируйте по умолчанию функцию `apply`, которая принимает на вход три параметра:
 
-## Setup
+-   Количество раз, которое нужно применить функцию к аргументу (ряд последовательных вызовов, где каждому следующему вызову передается аргумент, являющийся результатом предыдущего вызова функции; см. примеры ниже)
+-   Функцию для применения
+-   Аргумент для применения
 
-```sh
-$ make install
 ```
+apply(0, Math.sqrt, 4); // => 4
+apply(1, Math.sqrt, 4); // => 2
 
-## Run tests
+// Math.sqrt(Math.sqrt(16));
+apply(2, Math.sqrt, 16); // => 2
+// Math.sqrt(Math.sqrt(Math.sqrt(256)));
+apply(3, Math.sqrt, 256); // => 2
 
-```sh
-$ make test
+apply(1, v => v ** 2, 3); // => 9
+apply(5, v => v + 10, 3); // => 53
 ```
