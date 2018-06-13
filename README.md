@@ -1,17 +1,20 @@
-# nodejs-package
+### reverse.js
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+Реализуйте функцию `reverse`, переворачивающую строку. В этот раз, используя [итеративный процесс](https://ru.hexlet.io/courses/introduction_to_programming/lessons/iterative/theory_unit). Работа функции основана на двух принципах:
 
-## Setup
+-   Любой символ строки можно получить обратившись к нему по индексу, например: `str[3]`.
+-   Обращение к символу строки по несуществующему индексу возвращает `undefined`.
 
-```sh
-$ make install
-```
+    ```
+    const str = 'qwerty';
+    str[1]; // => w
+    str[10]; // => undefined
 
-## Run tests
+    ```
 
-```sh
-$ make test
-```
+#### Алгоритм
+
+Ваша задача - реализовать внутреннюю рекурсивную функцию `iter`, которая первым параметром принимает индекс текущего символа, а вторым - текущее значение аккумулятора. Начальный вызов инициализируется значениями `0` для индекса и `''` для аккумулятора. Алгоритм работы функции следующий:
+
+-   Если текущий индекс выходит за границы строки (извлечение символа возвращает `undefined`), то поиск закончился и, значит, нужно возвратить аккумулятор, содержащий перевернутую строку.
+-   В остальных случаях рекурсивно вызывается `iter` с увеличением индекса на единицу и интерполяцией, внутри которой, к содержимому аккумулятора, добавляется символ, взятый по текущему индексу.
