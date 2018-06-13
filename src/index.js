@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import flip from './flip';
 
-export default half;
+export default flip;

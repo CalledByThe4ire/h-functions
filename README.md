@@ -1,17 +1,27 @@
-# nodejs-package
+Во многих языках программирования существует интересная функция `flip`. Её необычность заключается в том, что единственная цель этой функции --- это преобразовать другую функцию так, чтобы порядок её аргументов был обратным.
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+Например, у нас может быть функция `pow`, которая возводит первый аргумент в степень второго. `flip` вернет нам новую функцию, у которой первый аргумент --- это степень, а второй --- это число, которое нужно возводить в эту степень.
 
-## Setup
+Эта функция бывает очень полезна при активной работе с функциями высшего порядка, она часто упрощает возможность комбинировать функции между собой.
 
-```sh
-$ make install
+### solution.js
+
+Реализуйте и экспортируйте по умолчанию функцию `flip`. Данная версия `flip` работает только с функциями от двух аргументов.
+
 ```
+// subtraction
+const sub = (a, b) => a - b;
+const reverseSub = flip(sub);
 
-## Run tests
+sub(5, 3); // 2
+reverseSub(5, 3); // -2
 
-```sh
-$ make test
+// exponentiation
+const wop = flip(Math.pow);
+
+Math.pow(1, 2); // 1
+wop(1, 2); // 2
+
+Math.pow(3, 2); // 9
+wop(3, 2); // 8
 ```

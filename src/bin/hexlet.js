@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import half from '..';
+// import funcName from '..';
 
-console.log(half(Number(process.argv[process.argv.length - 1])));
+// console.log(funcName(Number(process.argv[process.argv.length - 1])));
