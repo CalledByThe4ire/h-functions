@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import buildHtml from './buildHtml';
 
-export default half;
+export default buildHtml;

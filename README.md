@@ -1,17 +1,46 @@
-# nodejs-package
+Модуль `tags` содержит набор функций, позволяющих генерировать HTML с помощью функций.
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+```
+table(
+  tr(td('one'), td('two')),
+  tr(td('three'), td('four'))
+);
 
-## Setup
-
-```sh
-$ make install
 ```
 
-## Run tests
+В результате вызовов возвращается вот такой HTML:
 
-```sh
-$ make test
+```
+<table>
+  <tr>
+    <td>one</td>
+    <td>two</td>
+  </tr>
+  <tr>
+    <td>three</td>
+    <td>four</td>
+  </tr>
+</table>
+
+```
+
+### index.js
+
+Реализуйте и экспортируйте по умолчанию функцию, которая создает следующий HTML:
+
+```
+<table>
+  <tr>
+    <td>lang</td>
+    <td>comment</td>
+  </tr>
+  <tr>
+    <td>php</td>
+    <td>statements</td>
+  </tr>
+  <tr>
+    <td>clojure</td>
+    <td>expressions</td>
+  </tr>
+</table>
 ```
