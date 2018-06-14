@@ -1,17 +1,14 @@
-# nodejs-package
+### partialApply.js
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+Реализуйте и экспортируйте по умолчанию функцию `partialApply`. Эта функция умеет частично применять один (второй) аргумент у переданной функции:
 
-## Setup
-
-```sh
-$ make install
 ```
+const pow = (a, b) => a ** b;
+const f1 = partialApply(pow, 2);
+f1(1); // => 1
+f1(10); // => 100
 
-## Run tests
-
-```sh
-$ make test
+const f2 = partialApply((a, b) => a * b, 5);
+f2(2); // => 10
+f2(5); // => 25
 ```
