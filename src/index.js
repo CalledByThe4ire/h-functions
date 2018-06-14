@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import compose from './compose';
 
-export default half;
+export default compose;
