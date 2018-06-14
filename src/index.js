@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import concat from './concat';
 
-export default half;
+export default concat;

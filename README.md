@@ -1,17 +1,11 @@
-# nodejs-package
+### concat.js
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+Реализуйте и экспортируйте по умолчанию каррированую версию функции, которая принимает на вход три строки и возвращает новую строчку составленную из трех входных.
 
-## Setup
-
-```sh
-$ make install
 ```
+// исходная версия
+concat('a', 'bc', 'f'); // => abcf
 
-## Run tests
-
-```sh
-$ make test
+// каррированая версия
+concat('a')('bc')('f'); // => abcf
 ```
