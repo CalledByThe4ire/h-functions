@@ -1,5 +1,5 @@
 // @flow
 
-import half from './half';
+import numerals from './numerals';
 
-export default half;
+export default numerals;
