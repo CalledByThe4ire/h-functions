@@ -1,17 +1,14 @@
-# nodejs-package
+Удивительно, но факт, условные конструкции можно реализовать самостоятельно с использованием одних лишь каррированных функций.
 
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/javascript-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/javascript-package)
-[![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
+### logic.js
 
-## Setup
+Экспортируйте тройку `True`, `False`, `If`, используя только функции, внутри которых только функции ;) То есть нельзя пользоваться встроенными в язык `if`, а также `true/false`. Сами функции должны быть каррированы.
 
-```sh
-$ make install
+Пример:
+
 ```
+import { If, True, False } from './logic';
 
-## Run tests
-
-```sh
-$ make test
+If(True)('one')('two'); // one
+If(False)('one')('two'); // two
 ```
